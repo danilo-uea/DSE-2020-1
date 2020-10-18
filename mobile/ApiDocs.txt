@@ -1,0 +1,166 @@
+Tabela: fluxo_pessoas
+http://localhost:8000/api/fluxoPessoas [Post] - salvar um novo dado
+	body - {
+                "qtd_pessoas": 29,
+                "data_hora": "2020-10-17T13:22:20.656Z"
+            }
+    response - {
+                "id": 10,
+                "qtd_pessoas": 29,
+                "data_hora": "2020-10-17T13:22:20.656Z",
+                "updatedAt": "2020-10-17T14:15:33.235Z",
+                "createdAt": "2020-10-17T14:15:33.235Z"
+            }
+http://localhost:8000/api/fluxoPessoas/<id> [Put] - atualizar algum dado
+	body - {
+                "qtd_pessoas": 29,
+                "data_hora": "2020-10-17T13:22:20.656Z"
+            }
+    id - id do elemento a ser mudado
+    response - {
+            "message": "success"
+            }
+http://localhost:8000/api/fluxoPessoas/<id> [Delete] - apagar algum dado
+	body - null
+    id - id do elemento a ser apagado
+    response - {
+                "message": "success"
+            }
+http://localhost:8000/api/fluxoPessoas/ [Get] - consultar todos os elementos
+	body - null
+    response - [
+            {
+                "id": 3,
+                "qtd_pessoas": 29,
+                "data_hora": null,
+                "createdAt": "2020-10-17T13:22:20.000Z",
+                "updatedAt": "2020-10-17T13:22:20.000Z"
+            }
+        ]
+http://localhost:8000/api/fluxoPessoas/<id> [Get] - consultar um unico elemento
+	body - null
+    id - id do elemento a ser consultado
+    response - {
+                "id": 3,
+                "qtd_pessoas": 29,
+                "data_hora": null,
+                "createdAt": "2020-10-17T13:22:20.000Z",
+                "updatedAt": "2020-10-17T13:22:20.000Z"
+            }
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+Tabela: historico_temperatura
+http://localhost:8000/api/historicoTemperatura [Post] - salvar um novo dado
+	body - {
+            "qtd_pessoas": 29,
+            "data_hora": "2020-10-17T13:22:20.656Z",
+            "temperatura": 29.687
+        }
+    response - {
+                "id": 7,
+                "qtd_pessoas": 29,
+                "data_hora": "2020-10-17T13:22:20.656Z",
+                "temperatura": 29.687,
+                "updatedAt": "2020-10-17T14:18:13.371Z",
+                "createdAt": "2020-10-17T14:18:13.371Z"
+            }
+http://localhost:8000/api/historicoTemperatura/<id> [Put] - atualizar algum dado
+	body - {
+            "qtd_pessoas": 29,
+            "data_hora": "2020-10-17T13:22:20.656Z",
+            "temperatura": 29.687
+        }
+    id - id do elemento a ser mudado
+    response - {
+            "message": "success"
+            }
+http://localhost:8000/api/historicoTemperatura/<id> [Delete] - apagar algum dado
+	body - null
+    id - id do elemento a ser apagado
+    response - {
+                "message": "success"
+            }
+http://localhost:8000/api/historicoTemperatura/ [Get] - consultar todos os elementos
+	body - null
+    response - [
+                {
+                    "id": 1,
+                    "qtd_pessoas": 29,
+                    "data_hora": "2020-10-17T13:22:20.000Z",
+                    "temperatura": 29.687,
+                    "createdAt": "2020-10-17T13:42:02.000Z",
+                    "updatedAt": "2020-10-17T13:42:02.000Z"
+                }
+            ]
+http://localhost:8000/api/historicoTemperatura/<id> [Get] - consultar um unico elemento
+	body - null
+    id - id do elemento a ser consultado
+    response - {
+                    "id": 1,
+                    "qtd_pessoas": 29,
+                    "data_hora": "2020-10-17T13:22:20.000Z",
+                    "temperatura": 29.687,
+                    "createdAt": "2020-10-17T13:42:02.000Z",
+                    "updatedAt": "2020-10-17T13:42:02.000Z"
+                }
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+Tabela: status_janela_arcondicionado
+http://localhost:8000/api/statusJanelaArcondicionado [Post] - salvar um novo dado
+	body - {
+            "janela": "Aberta",
+            "arcondicionado":"desligado",
+            "data_hora": "2020-10-17T13:22:20.656Z"
+        }
+    response - {
+            "id": 4,
+            "janela": "Aberta",
+            "arcondicionado": "desligado",
+            "data_hora": "2020-10-17T13:22:20.656Z",
+            "updatedAt": "2020-10-17T14:21:13.665Z",
+            "createdAt": "2020-10-17T14:21:13.665Z"
+        }
+http://localhost:8000/api/statusJanelaArcondicionado/<id> [Put] - atualizar algum dado
+	body - {
+            "janela": "Aberta",
+            "arcondicionado":"desligado",
+            "data_hora": "2020-10-17T13:22:20.656Z"
+        }
+    id - id do elemento a ser mudado
+    response - {
+            "message": "success"
+            }
+http://localhost:8000/api/statusJanelaArcondicionado/<id> [Delete] - apagar algum dado
+	body - null
+    id - id do elemento a ser apagado
+    response - {
+                "message": "success"
+            }
+http://localhost:8000/api/statusJanelaArcondicionado/ [Get] - consultar todos os elementos
+	body - null
+    response - [
+                {
+                    "id": 1,
+                    "janela": "Aberta",
+                    "arcondicionado": "desligado",
+                    "data_hora": "2020-10-17T13:22:20.000Z",
+                    "createdAt": "2020-10-17T14:03:06.000Z",
+                    "updatedAt": "2020-10-17T14:03:06.000Z"
+                }
+            ]
+http://localhost:8000/api/statusJanelaArcondicionado/<id> [Get] - consultar um unico elemento
+	body - null
+    id - id do elemento a ser consultado
+    response - {
+                    "id": 1,
+                    "janela": "Aberta",
+                    "arcondicionado": "desligado",
+                    "data_hora": "2020-10-17T13:22:20.000Z",
+                    "createdAt": "2020-10-17T14:03:06.000Z",
+                    "updatedAt": "2020-10-17T14:03:06.000Z"
+                }
+
