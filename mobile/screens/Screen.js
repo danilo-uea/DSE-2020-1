@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   tituloTexto: {
     marginLeft: 20,
     fontWeight: 'bold',
-    fontSize: 25,
+    fontSize: 20,
   },
   menuBotao: {
     height: 60,

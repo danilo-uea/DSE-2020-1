@@ -7,7 +7,7 @@ export default class Home extends Component {
     return (
       <View style={styles.containerGeral}>
         <View style={styles.screen}>
-          <Screen navigation={this.props.navigation} name="Home" />
+          <Screen navigation={this.props.navigation} name="Fluxo de pessoas" />
         </View>
         <View style={styles.conteudo}>
           <Text>Conteúdo</Text>
