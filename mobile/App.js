@@ -1,9 +1,11 @@
 import * as React from 'react';
-// import {View, Text, Button, StyleSheet} from 'react-native';
+//import {View, Text, Button, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import Home from './src/home/Home';
-import Detalhes from './src/detalhes/Detalhes';
+import Home from './src/paginas/home';
+import Temperatura from './src/paginas/temperatura';
+import PessoaTemperatura from './src/paginas/pessoastemp';
+import JanelaAr from './src/paginas/janelaarcondicionado';
 
 const Drawer = createDrawerNavigator();
 
@@ -12,7 +14,12 @@ function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Fluxo de pessoas">
         <Drawer.Screen name="Fluxo de pessoas" component={Home} />
-        <Drawer.Screen name="Detalhes" component={Detalhes} />
+        <Drawer.Screen name="Temperatura" component={Temperatura} />
+        <Drawer.Screen
+          name="Pessoas x Temperaturas"
+          component={PessoaTemperatura}
+        />
+        <Drawer.Screen name="Janela e Ar-condicionado" component={JanelaAr} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

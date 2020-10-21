@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, Image, StyleSheet} from 'react-native';
 
-export default class Screen extends React.Component {
+export default class Topo extends React.Component {
   render() {
     return (
       <View style={styles.container}>
