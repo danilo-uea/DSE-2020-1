@@ -8,6 +8,7 @@ import {Grid, LineChart, XAxis, YAxis} from 'react-native-svg-charts';
 export default class Temperatura extends Component {
   state = {
     dados: [],
+    invertido: [],
   };
 
   componentDidMount() {
@@ -16,7 +17,10 @@ export default class Temperatura extends Component {
 
   preencherFluxo = async () => {
     const temperatura = await api.get('/historicoTemperatura');
-    this.setState({dados: temperatura.data});
+    this.setState({
+      dados: temperatura.data,
+      invertido: temperatura.data.reverse(),
+    });
   };
 
   atualizar = () => {
@@ -25,7 +29,7 @@ export default class Temperatura extends Component {
   };
 
   render() {
-    const {dados} = this.state;
+    const {dados, invertido} = this.state;
     var formatoData;
     var y = [];
     for (var i = 0; i < dados.length; i++) {
@@ -81,7 +85,7 @@ export default class Temperatura extends Component {
             <View style={styles.lista}>
               <Text style={styles.titulo}>Lista</Text>
               <View style={styles.linha} />
-              {dados.map(function (item) {
+              {invertido.map(function (item) {
                 formatoData = format(
                   new Date(item.data_hora),
                   "dd'/'MM'/'yyyy HH:mm",

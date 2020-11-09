@@ -8,6 +8,7 @@ import {BarChart, Grid} from 'react-native-svg-charts';
 export default class JanelaAr extends Component {
   state = {
     dados: [],
+    decrescente: [],
   };
 
   componentDidMount() {
@@ -16,7 +17,7 @@ export default class JanelaAr extends Component {
 
   preencherFluxo = async () => {
     const janelaar = await api.get('/statusJanelaArcondicionado');
-    this.setState({dados: janelaar.data});
+    this.setState({dados: janelaar.data, decrescente: janelaar.data.reverse()});
   };
 
   atualizar = () => {
@@ -25,7 +26,7 @@ export default class JanelaAr extends Component {
   };
 
   render() {
-    const {dados} = this.state;
+    const {dados, decrescente} = this.state;
     var formatoData;
     var janela = [];
     var arcondicionado = [];
@@ -130,7 +131,7 @@ export default class JanelaAr extends Component {
             <View style={styles.lista}>
               <Text style={styles.titulo}>Lista</Text>
               <View style={styles.linha} />
-              {dados.map(function (item) {
+              {decrescente.map(function (item) {
                 formatoData = format(
                   new Date(item.data_hora),
                   "dd'/'MM'/'yyyy HH:mm",
